@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl"> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake</title>
+    <style>
+        @font-face{
+            font-family: myFont ;
+            src: url("\SerpensRegular-7MGE.ttf");
+            
+        }
+        h1{
+            font-family: myFont;
+            font-size: 100px;
+            margin:10px
+        }
+        body {
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(19, 165, 26);
+            justify-content: center;
+            align-items: center;
+        }
+        canvas {
+            box-shadow: black 20px 10px 50px;
+            flex: auto;
+        }
+        button {
+            position: relative;
+            width: 300px;
+            height: 60px;
+            margin: 20px auto;
+            padding: 0;
+            font-size: 22px;
+            text-align: center;
+            color: white;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            overflow: hidden;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+            transition: transform 0.4s ease-in-out;
+            border-radius: 25px;
+            }
+
+            button:active {
+            top: 1px;
+            box-shadow: none;
+            }
+
+            .icon {
+                position: absolute;
+                left: 20px;
+            }
+            .btn-green {
+                background: #1abc9c;
+                
+                
+            }
+            .btn-green .icon {
+                width: 24px;
+                height: 24px;
+                transition: all 0.4s ease-in-out;
+            }
+            .btn-green:hover .icon {
+                transform: rotate(360deg) scale(1.2);
+            }
+                
+                
+    </style>
+</head>
+<body>
+    <h1>
+        SNAKE
+    </h1>
+    <canvas id="game" width="400" height="400"></canvas>
+    <script src="index.js"></script>
+    <div >
+        <button id="btn" class="btn-green" >
+            <img class="icon" src="https://htmlacademy.ru/assets/icons/reload-6x-white.png"> Restart
+        </button>
+    </div>
+</body>
+</html>
